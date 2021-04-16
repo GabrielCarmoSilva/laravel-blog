@@ -21,7 +21,7 @@
         <input type="email" name="email" id="email" autocomplete="off" required class="form-control" value="{{ old('email', $user->email )}}">
     </div>
     <div class="form-group col-12">
-        <label for="image">Imagem </label><br>
+        <label for="image">Foto de perfil </label><br>
         @if(Route::is('users.show'))
             <img class="img-fluid" src={{ asset('storage/' . $user->image) }} width="400" height="400">
         @else    
@@ -33,11 +33,11 @@
         @if(Route::is('users.edit'))
             <div class="form-group col-12">
                 <label for="password">Senha </label>
-                <input type="password" autocomplete="password" name="password"  id="password"  class="form-control" >
+                <input type="text" autocomplete="password" name="password"  id="password"  class="form-control" >
             </div>
             <div class="form-group col-12">
                 <label for="confirm_password">Confirme sua senha </label>
-                <input type="password" name="confirm_password" autocomplete="password" id="password" class="form-control">
+                <input type="text" name="confirm_password" autocomplete="password" id="password" class="form-control">
             </div>
         @else
             <div class="form-group col-12">
@@ -46,7 +46,7 @@
             </div>
             <div class="form-group col-12">
                 <label for="confirm_password" class="required">Confirme sua senha </label>
-                <input type="password" name="confirm_password" id="password" required class="form-control">
+                <input type="password" name="confirm_password" id="confirm_password" required class="form-control">
             </div>
         @endif
     @endif
