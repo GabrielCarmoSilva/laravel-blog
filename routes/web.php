@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/post/{post}', 'HomeController@post')->name('post');
+Route::get('/posts/categoria/{category}', 'HomeController@categoryPost')->name('postCategory');
+Route::get('/posts/mes/{mes}', 'HomeController@monthPosts')->name('postMonth');
+Route::post('/search', 'HomeController@search')->name('search');
+Route::get('/contato', 'ContactController@contact')->name('contact');
+Route::post('/contato', 'ContactController@sendContact')->name('send_contact');
 
 Route::middleware('auth')->group(function(){
     Route::get('/admin', function () {

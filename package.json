@@ -28,5 +28,8 @@
         "jquery-mask-plugin": "^1.14.16",
         "select2": "^4.0.13",
         "sweetalert2": "^9.7.2"
+    },
+    "dependencies": {
+        "cookieconsent": "^3.1.1"
     }
 }

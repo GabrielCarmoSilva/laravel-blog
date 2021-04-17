@@ -2,9 +2,9 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +24,7 @@ $factory->define(User::class, function (Faker $faker) {
         'email_verified_at' => now(),
         'password' => bcrypt('123456'),
         'remember_token' => Str::random(10),
+        'user_level' => '0',
+        'status' => '1',
     ];
 });

@@ -17,6 +17,7 @@ try {
     require('datatables.net-bs4');
     require('select2');
     require('summernote');
+    require('cookieconsent');
 } catch (e) {}
 
 /**
