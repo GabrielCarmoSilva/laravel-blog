@@ -35,10 +35,8 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <div class="row mt-4">
-                <div class="col-md-1">
-                </div>
-                <div class="col-md-7">
+            <div class="mt-4 row">
+                <div class="col-md-8">
                     @foreach($posts as $post)
                         <div class="col-12" style="margin: 50px;">
                             <a href="{{ route('post', $post->id) }}"><h2>{{ $post->title }}</h2></a>
@@ -83,7 +81,7 @@
     <div class="d-flex justify-content-center">
         {!! $posts->links() !!}
     </div>
-    <div class="alert alert-dismissible text-center cookiealert" role="alert">
+    <div class="text-center alert alert-dismissible cookiealert" role="alert">
   <div class="cookiealert-container">
       <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="http://cookiesandyou.com/" target="_blank">Learn more</a>
 
